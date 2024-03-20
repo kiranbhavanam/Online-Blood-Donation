@@ -1,9 +1,9 @@
 const registrationForm = document.getElementById("registration-form");
+const users = JSON.parse(localStorage.getItem("details")) || [];
 registrationForm.addEventListener("submit", function (event) {
   event.preventDefault();
   // storing the form data into local storage using object array.
   const formData = new FormData(registrationForm);
-  const users = JSON.parse(localStorage.getItem("details")) || [];
   const data = {};
   for (const [key, value] of formData.entries()) {
     data[key] = value;

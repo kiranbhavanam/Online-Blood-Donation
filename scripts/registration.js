@@ -3,5 +3,5 @@ const registrationForm = document.getElementById("registration-form");
 registrationForm.addEventListener("submit", function (event) {
   event.preventDefault();
   saveUser(registrationForm);
-  window.location.href = "registeredUsers.html";
+  // window.location.href = "registeredUsers.html";
 });

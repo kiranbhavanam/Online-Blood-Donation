@@ -1,4 +1,21 @@
 import { users } from "../data/userData.js";
+import { request } from "../data/userData.js";
+export function specificGroup(request) {
+  const specificDetails = [];
+  console.log(request)
+  users.filter((user) => {
+    user["blood-group"] === request&&
+      specificDetails.push(user);
+  });
+
+  // console.log(users);
+  console.log(specificDetails);
+  setTimeout(() => {
+    generateUsers(specificDetails);
+  }, 1000);
+}
+specificGroup(request);
+// specificGroup("A+");
 function generateUsers(details) {
   let html = "";
   details.forEach((user) => {
@@ -13,6 +30,7 @@ function generateUsers(details) {
     `;
   });
   // console.log(html);
-  document.querySelector(".js-userDetails").innerHTML = html;
+  const targetEle = document.querySelector(".js-userDetails");
+  targetEle.innerHTML = html;
 }
-generateUsers(users);
+// generateUsers(users);

@@ -10,14 +10,16 @@
     <header>
       <h1>Online Blood Donation System</h1>
     </header>
-    <main>
-      <button onclick="window.location.href='registration.html';">
-        Register as a Donor
-      </button>
-      <button onclick="window.location.href='request.html';">
-        Request for Blood
-      </button>
-    </main>
+    <nav class="navbar">
+      <ul class="navbar-ul">
+        <li id="selected">Home</li>
+        <li onclick="window.location.href='request.html';">request blood</li>
+        <li onclick="window.location.href='registration.html';">
+          register as donor
+        </li>
+      </ul>
+    </nav>
+
     <footer>
       <p>&copy; 2024 Online Blood Donation System</p>
     </footer>

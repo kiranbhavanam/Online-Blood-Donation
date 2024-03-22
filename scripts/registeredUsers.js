@@ -2,17 +2,15 @@ import { users } from "../data/userData.js";
 import { request } from "../data/userData.js";
 export function specificGroup(request) {
   const specificDetails = [];
-  console.log(request)
+  console.log(request);
   users.filter((user) => {
-    user["blood-group"] === request&&
-      specificDetails.push(user);
+    user["blood-group"] === request && specificDetails.push(user);
   });
 
   // console.log(users);
   console.log(specificDetails);
-  setTimeout(() => {
-    generateUsers(specificDetails);
-  }, 1000);
+  generateUsers(specificDetails);
+  // setTimeout(() => {}, 1000);
 }
 specificGroup(request);
 // specificGroup("A+");
@@ -34,3 +32,6 @@ function generateUsers(details) {
   targetEle.innerHTML = html;
 }
 // generateUsers(users);
+document.querySelector(".js-go-back").addEventListener("click", () => {
+  window.location.href = "request.html";
+});

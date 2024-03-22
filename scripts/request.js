@@ -1,4 +1,4 @@
-import { requestData ,request} from "../data/userData.js";
+import { requestData } from "../data/userData.js";
 const bloodRequestForm = document.getElementById("blood-request-form");
 bloodRequestForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -6,8 +6,7 @@ bloodRequestForm.addEventListener("submit", function (event) {
   // console.log("form data", bloodRequestForm[1].value);
   const formData = new FormData(bloodRequestForm);
   const bloodGroup = formData.get("blood-group");
-  console.log(bloodGroup,typeof(bloodGroup));
+  // console.log(bloodGroup, typeof bloodGroup);
   requestData(bloodGroup);
-  console.log(request);
-  // window.location.href = "../registeredUsers.html";
+  window.location.href = "../registeredUsers.html";
 });

@@ -4,6 +4,15 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
+.main{
+background-image: url('./images/background.jpeg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center 100px;
+}
+.navbar{
+  width:100%;
+}
 .navbar-ul{
   list-style: none;
   display: flex;
